@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width, initial scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Sidebar</title>
+
+        <style>
+            .sidebar {
+                height: 100%;
+                width: 200px;
+                left: -200px;
+                top: 0px;
+                background-color: greenyellow;
+                position: fixed;
+                transition-duration: 1000ms;
+            }
+
+            .main {
+                height: 100%;
+                width: 100%;
+                top: 0px;
+                margin-left: 0px;
+                transition-duration: 1000ms;
+            }
+
+            .sidebar1 {
+                height: 100%;
+                width: 200px;
+                left: 0px;
+                top: 0px;
+                background-color: greenyellow;
+                position: fixed;
+                transition-duration: 1000ms;
+            }
+
+            .main1 {
+                height: 100%;
+                width: 100%;
+                top: 0px;
+                margin-left: 200px;
+                transition-duration: 1000ms;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="sidebar" id="sidebar">
+            <span style="font-size: 30px; cursor: pointer; float: right;" onclick="closeNav()">&#9776;</span>
+            <ul>
+                <li>Home</li>
+                <li>Profile</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div class="main" id="main">
+            <span style="font-size: 30px; cursor: pointer;" onclick="openNav()">&#9776;</span>
+            <h1>Ini Konten Utama</h1>
+        </div>
+
+        <script>
+            function openNav() {
+                document.getElementById('sidebar').className="sidebar1";
+                document.getElementById('main').className="main1";
+            }
+
+            function closeNav() {
+                document.getElementById('sidebar').className="sidebar";
+                document.getElementById('main').className="main";
+            }
+        </script>
+    </body>
+</html>

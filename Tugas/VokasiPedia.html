@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width, initial scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>VokasiPedia</title>
+
+        <script src="Vue.js"></script>
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .navbar {
+                background-color: #121212;
+                color: #ffffffee;
+                width: 100%;
+                height: 50px;
+                padding-left: 20px;
+                padding-bottom: 60px;
+                margin-top: -7px;
+                top: 0px;
+                left: 0px;
+                position: fixed;
+            }
+
+            .container {
+                margin-top: 80px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .main {
+                flex: 70%;
+                background-color: #ffffffee;
+                padding: 10px;
+            }
+
+            .side {
+                flex: 30%;
+                background-color: #121212;
+                padding: 20px;
+                color: #ffffffee;
+            }
+
+            .listitem {
+                margin: 5px;
+                width: 200px;
+                height: 300px;
+                float: left;
+                border: 2px solid #121212;
+            }
+
+            .listitem:hover {
+                transition-duration: 500ms;
+                box-shadow: 2px 2px #121212;
+            }
+
+            .listitem img {
+                width: 100%;
+                height: 150px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="navbar">
+            <h2>VokasiPedia</h2>
+        </div>
+
+        <div class="container" id="container">
+            <div class="main">
+                <div class="listitem" v-for="anuku in anu">
+                    <img v-bind:src="anuku.gambar">
+                    {{anuku.jeneng}} <br>
+                    Harga : {{anuku.tarif}} <br> <br>
+                    <button v-on:click="addCart(anuku.gambar)" type="button">Tumbas</button>
+                </div>
+            </div>
+            <div class="side">
+                Keranjang tahanan<br>
+                {{qty}}
+                <table>
+                    <tr v-for="(gambar,index) in keranjangtahanan">
+                        <td><img v-bind:src="gambar" style="width: 200px;"></td>
+                        <td><button v-on:click="removeCart(index)" type="button">X</button></td>
+                    </tr>
+                </table>
+                
+                <div v-if="qty >=4"><br>
+                    Borong ni yeee!!!
+                    <img src="http://clipart-library.com/images_k/wink-emoji-transparent/wink-emoji-transparent-4.png" width="100px" height="100px">
+                </div>
+                <div v-else-if="qty >=2"><br>
+                    Beli lagi biar dapet bonus!!!
+                    <img src="http://clipart-library.com/images/8cE6xe8Ai.png" width="100px" height="100px">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var vm = new Vue({
+                el: '#container',
+                data: {
+                    anu:[
+                        {jeneng:'Penguin', tarif:'18000000', gambar:'Penguins.jpg'},
+                        {jeneng:'Hydrangea / Hortensia', tarif:'20000', gambar:'Hydrangeas.jpg'},
+                        {jeneng:'Tulip', tarif:'300000', gambar:'Tulips.jpg'},
+                        {jeneng:'Koala', tarif:'1500000', gambar:'Koala.jpg'},
+                        {jeneng:'Jellyfish / Ubur-ubur', tarif:'40000', gambar:'Jellyfish.jpg'}
+                    ],
+                    keranjangharga:[],
+                    keranjangtahanan:[],
+                    qty:0,
+                },
+                methods: {
+                    addCart:function(gambar) {
+                        this.keranjangtahanan.push(gambar);
+
+                        this.qty += 1;
+                    },
+                    removeCart:function(index) {
+                        this.keranjangtahanan.splice(index,1)
+                        this.keranjangharga.splice(index,1)
+                        this.keranjanggambar.splice(index,1)
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

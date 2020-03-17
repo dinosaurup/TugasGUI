@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width, initial scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Web</title>
+
+        <style>
+            div {
+                width: auto;
+                height: auto;
+            }
+
+            .mode {
+                width: 100px;
+                height: 72px;
+                padding: 2px;
+                background-color: turquoise;
+                position: fixed;
+                left: 1170px;
+            }
+
+            .container {
+                width: 800px;
+                height: 1500px;
+                border: 2px solid black;
+                margin-top: 25px;
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .ribbon {
+                background-image: url(pita.png);
+                width: 150px;
+                height: 150px;
+                float: right;
+                background-size: cover;
+                position: absolute;
+                margin-top: -17px;
+                margin-left: 672px;
+            }
+
+            .kotak {
+                width: 195px;
+                background-color: coral;
+                opacity: 0.52;
+                
+            }
+
+            .judul {
+                padding-left: 20px;
+                border-bottom: 2px solid black;
+            }
+
+            .judul h1 {
+                text-shadow: 3px 2px firebrick;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .menu {
+                padding: 10px 5px 10px 20px;
+                border-bottom: 2px solid black;
+            }
+
+            .menu a {
+                text-decoration: none;
+                color: firebrick;
+            }
+
+            .menu a:hover {
+                text-decoration: none;
+                color: gold;
+            }
+
+            .banner {
+                background-color: firebrick;
+                width: auto;
+                height: 200px;
+                background-image: url(Gabut.jpg);
+                background-size: cover;
+                border-bottom: 2px solid black;
+            }
+
+            .judulartikel {
+                padding-left: 20px;
+            }
+
+            .konten {
+                width: auto;
+                height: 400px;
+                padding-top: 5px;
+                padding-left: 20px;
+                padding-right: 10px;
+                overflow: auto;
+                background-color: white;
+            }
+
+            .konten img {
+                width: 200px;
+                height: 200px;
+                padding-right: 20px;
+                float: left;
+            }
+
+            .gallery {
+                margin: 5px 5px 5px 5px;
+                width: 190px;
+                height: 100px;
+                background-color: coral;
+                float: left;
+                background-image: url(vokasi.png);
+                background-size: cover;
+            }
+
+            .tester {
+                width: 100px;
+                height: 100px;
+                background-color: turquoise;
+            }
+
+            .cobaevent1 {
+                width: 100px;
+                height: 100px;
+                background-color: salmon;
+            }
+
+            .cobaevent2 {
+                width: 100px;
+                height: 100px;
+                background-color: springgreen;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="mode">
+            <div>
+                <button type="button" onclick="ubahwarna_dark()">Mode Malam Hari</button>
+            </div>
+            <div>
+                <button type="button" onclick="ubahwarna_light()">Mode Siang Hari</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="ribbon">
+
+            </div>
+            <div class="judul">
+                <div class="kotak"><h1>Website Kita</h1></div>
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Profil</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="banner">
+                <!-- <img src="C:\Users\user\Documents\Kuliah\Semester 4\GUI\ribbon.png"> -->
+            </div>
+            <div class="judulartikel">
+                <h2>Judul Artikel</h2>
+                <p>Ditulis oleh Hamba Allah</p>
+            </div>
+            <div class="konten" id="konten">
+                <img src="C:\Users\user\Documents\Kuliah\vokasi.png">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum magni quia debitis nihil, eligendi suscipit quos ad nisi inventore laborum explicabo minus deserunt, quae temporibus quidem dolor, quo dolorum ipsam!</p>
+            </div>
+            <div class="gallery">
+                1
+            </div>
+            <div class="gallery">
+                2
+            </div>
+            <div class="gallery">
+                3
+            </div>
+            <div class="gallery">
+                4
+            </div>
+            <div class="gallery">
+                5
+            </div>
+            <div class="gallery">
+                6
+            </div>
+            <div class="gallery">
+                7
+            </div>
+            <div class="gallery">
+                8
+            </div>
+        </div>
+        <div class="tester" id="cobaeventku" ondblclick="divkelakuan()" onmouseup="divkelakuan2()" onmousedown="divkelakuan3()">
+
+        </div>
+
+        <script>
+            function ubahwarna_dark() {
+                document.getElementById('konten').style.backgroundColor="black";
+                document.getElementById('konten').style.color="white";
+            }
+
+            function ubahwarna_light() {
+                document.getElementById('konten').style.backgroundColor="white";
+                document.getElementById('konten').style.color="black";
+            }
+
+            function divkelakuan() {
+                document.getElementById('cobaeventku').className="cobaevent1";
+            }
+
+            function divkelakuan2() {
+                document.getElementById('cobaeventku').className="tester";
+            }
+
+            function divkelakuan3() {
+                document.getElementById('cobaeventku').className="cobaevent2";
+            }
+        </script>
+
+    </body>
+</html>
