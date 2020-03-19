@@ -1,1 +1,1 @@
-# Repo yg isinya Tugas dan UTS matkul implementasi GUI untuk web.
+# Repo yg isinya Tugas matkul implementasi GUI untuk web.
