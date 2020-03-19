@@ -1,2 +1,2 @@
-#TugasGUI 
+# TugasGUI
 Repo yg isinya Tugas matkul implementasi GUI untuk web.
